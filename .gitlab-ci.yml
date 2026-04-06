@@ -27,7 +27,7 @@ build-jar:
   image: maven:3.9-eclipse-temurin-17
   before_script:
     - echo "Clonage et installation du module task-core parent"
-    - git clone https://github.com/Houdini16/task-core.git /tmp/task-core
+    - git clone https://github.com/Madieyeee/task-core.git /tmp/task-core
     - cd /tmp/task-core
     - mvn clean install -DskipTests
     - cd $CI_PROJECT_DIR
