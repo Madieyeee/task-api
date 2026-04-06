@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: task-api
-          image: houdini16/task-api:latest
+          image: madieyeee/task-api:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8085

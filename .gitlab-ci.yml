@@ -1,6 +1,6 @@
 # ======================================================
 # GitLab CI/CD Pipeline — Task-API
-# Auteurs: Abdoulaye Bilal Samba DIOP & Madieye ANNE
+# Auteur: Madieye ANNE
 # Groupe 1 — L3GL ISI DevOps
 # ======================================================
 
@@ -11,7 +11,7 @@ stages:
 variables:
   MAVEN_CLI_OPTS: "--batch-mode"
   MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository"
-  DOCKER_IMAGE: "houdini16/task-api"
+  DOCKER_IMAGE: "madieyeee/task-api"
   DOCKER_TAG: "latest"
 
 cache:
