@@ -30,7 +30,7 @@ data:
 
 ---
 # ============================================
-# MySQL Deployment
+# MySQL Deployment (5.7 - plus leger)
 # ============================================
 apiVersion: apps/v1
 kind: Deployment
@@ -48,9 +48,16 @@ spec:
       labels:
         app: mysql
     spec:
+      initContainers:
+        - name: init-mysql-data
+          image: busybox
+          command: ['sh', '-c', 'rm -rf /var/lib/mysql/* /var/lib/mysql/..?* /var/lib/mysql/.[!.]*']
+          volumeMounts:
+            - name: mysql-storage
+              mountPath: /var/lib/mysql
       containers:
         - name: mysql
-          image: mysql:8.0
+          image: mysql:5.7
           ports:
             - containerPort: 3306
           env:
