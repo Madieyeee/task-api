@@ -81,13 +81,6 @@ spec:
                 secretKeyRef:
                   name: mysql-secret
                   key: MYSQL_PASSWORD
-          resources:
-            requests:
-              cpu: 200m
-              memory: 300Mi
-            limits:
-              cpu: 1000m
-              memory: 1500Mi
           volumeMounts:
             - name: mysql-storage
               mountPath: /var/lib/mysql
